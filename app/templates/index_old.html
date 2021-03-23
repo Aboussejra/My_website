@@ -1,0 +1,10 @@
+ {% extends "base.html" %}
+    {% block lama %}
+        <h1>Yo, {{ user.username }}!</h1>
+        {% for messages in messages %}
+        <div><p>{{ messages.author.username }} says: <b>{{ messages.body }}</b></p></div>
+        {% endfor %}
+        {% for perfs_deadlift in perfs_deadlift %}
+        <div><p>Bro says your deadlift is <b>{{ perfs_deadlift }}</b>, pretty weak bro</p></div>
+        {% endfor %}
+    {% endblock %}

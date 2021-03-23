@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+      {% if title %}
+      <title>{{ title }} - Musclay</title>
+      {% else %}
+      <title>Welcome, lifting bruh</title>
+      {% endif %}
+      <link rel="stylesheet" href="static/css/base.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <body>
+      <div>
+        Musclay:
+        <a href="\index">Tests</a>
+        <a href="\sign_up">Sign up</a>
+        <a href="\login">Log in</a>
+    </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        
+            {% for message in messages %}
+            <div  class="alert-info">{{ message }}</div>
+            {% endfor %}
+      
+        {% endif %}
+        {% endwith %}
+        {% block lama %}{% endblock %}
+        <img src="{{url_for('static', filename='Schwarzy.jpg')}}" align="middle" />
+    </body>
+
+</html>

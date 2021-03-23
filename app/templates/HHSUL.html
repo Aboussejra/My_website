@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HHSUL</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+
+    </style>
+ 
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/HHSUL.css" rel="stylesheet">
+
+  </head>
+  <div class="column"> b</div>
+  <div class="column">
+  <body class="text-center">
+
+
+        <main class="form-signin">
+        <form action="" method="post" novalidate>
+            <h1 class="h3 mb-3 fw-normal">How much should you lift?</h1>
+            <img class="mb-4" src="https://previews.123rf.com/images/09910190/099101901611/09910190161100055/69440477-dumbbell-black-icon-weight-lifting-dumbell-for-fitness-in-gym-vector-illustration.jpg" alt="" width="72" height="57">
+            {{ form.hidden_tag() }}
+            
+            <p>
+                {% if form.errors %} 
+                <span style="color: red;"> i need all the data to predict :(  </span>
+                {% endif %}
+            </p><p>
+                {{ form.age.label }}<br>
+                {{ form.age(size=32) }}<br>
+            </p>
+            <p>
+                {{ form.time_training.label }}<br>
+                {{ form.time_training(size=32) }}<br>
+            </p>
+            <p>
+                {{ form.wheight.label }}<br>
+                {{ form.wheight(size=32) }}<br>
+    
+            </p>
+            <p>
+                {{ form.height.label }}<br>
+                {{ form.height(size=32) }}<br>
+                
+            </p>
+            <p>
+                {{ form.natty.label }}<br>
+                {{ form.natty(size=32) }}<br>
+                
+            </p>
+            <p>
+                {{ form.body_fat.label }}<br>
+                {{ form.body_fat(size=32) }}<br>
+                
+            </p>
+            <p>
+                {{ form.bulking_shredding.label }}<br>
+                {{ form.bulking_shredding(size=32) }}<br>
+            </p>
+           <button class="w-100 btn btn-lg btn-primary" name="btnSubmit" type="submit">Tell me how much i should lift!</button>
+            
+           <p>{{ prediction }}</p>
+        </form>
+    </main>
+</body>
+  </div>
+  <div class="column"> c</div>
+
+</html>

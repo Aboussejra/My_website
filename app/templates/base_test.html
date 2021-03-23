@@ -1,0 +1,34 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}
+      {% if title %}
+      <title>{{ title }} - Musclay</title>
+      {% else %}
+      <title>Welcome, lifting bruh</title>
+      {% endif %}
+      <link rel="stylesheet" href="static/css/base.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+      {% endblock %}
+      {% block navbar %}
+      <div>
+        <nav class="navbar navbar-default">
+        Musclay:
+        <a href="\index">Tests</a>
+        <a href="\sign_up">Sign up</a>
+        <a href="\login">Log in</a>
+      </nav>
+    </div>
+    {% endblock %}
+    {% block content %}
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        
+            {% for message in messages %}
+            <div  class="alert-info">{{ message }}</div>
+            {% endfor %}
+      
+        {% endif %}
+        {% endwith %}
+        {% block lama %}{% endblock %}
+        <img src="{{url_for('static', filename='Schwarzy.jpg')}}" align="middle" />
+        {% endblock %}

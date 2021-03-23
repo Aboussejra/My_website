@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block lama %}
+
+<main class="px-3">
+    <h1>Musclay</h1>
+    <p class="lead">Yo, {{ user.username }}!</p>
+    {% for messages in messages %}
+    <div><p>{{ messages.author.username }} says: <b>{{ messages.body }}</b></p></div>
+    {% endfor %}
+    {% for perfs_deadlift in perfs_deadlift %}
+    <div><p>Bro says your deadlift is <b>{{ perfs_deadlift }}</b>, pretty weak bro</p></div>
+    {% endfor %}
+    <p class="lead">
+      <a href="\who_am_i" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Who am i?</a>
+    </p>
+  </main>
+  {% endblock %}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Amir with Bootstrap help">
+    <title>Sign Up</title>
+
+  
+    <!-- Bootstrap core CSS -->
+<link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="static/css/cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+    <div>
+      <h3 class="float-md-start mb-0">MuscleHUB</h3>
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a class="nav-link" href="\index">Tests</a>
+        <a class="nav-link active" aria-current="page" href="\sign_up">Sign Up</a>
+        <a class="nav-link" href="\login">Log in</a>
+        
+      </nav>
+    </div>
+  </header>
+  <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        
+            {% for message in messages %}
+            <div  class="alert-info">{{ message }}</div>
+            {% endfor %}
+      
+        {% endif %}
+        {% endwith %}
+        
+    <h1>Sign Up</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;"> you must give me your info bruh :( </span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;"> u know imma just going to sell it to google ;) </span>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+
+    <footer class="mt-auto text-white-50">
+        <p>Muscular site for <a class="text-white"> Lifting Bros</a>, by <a class="text-white"> Amir Boussejra</a>.</p>
+      </footer>
+    </div>
+    
+    
+        
+      </body>
+    </html>
+    
