@@ -16,5 +16,8 @@ session = Session()
 
 from app import routes
 
+if __name__ == '__main__':
+        import os  
+        app.run(host='0.0.0.0')
 # venv\Scripts\activate
 # set FLASK_APP=Muscu_site.py
