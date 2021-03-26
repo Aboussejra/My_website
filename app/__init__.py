@@ -8,11 +8,11 @@ from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config.from_object(Config)
-engine = create_engine('sqlite:///test.db', echo=True)
+#engine = create_engine('sqlite:///test.db', echo=True)
 bootstrap = Bootstrap(app)
 # create a Session
-Session = sessionmaker(bind=engine)
-session = Session()
+#Session = sessionmaker(bind=engine)
+#session = Session()
 
 from app import routes
 
