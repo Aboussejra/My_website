@@ -1,26 +1,26 @@
-from sqlalchemy import *
-from sqlalchemy import create_engine, ForeignKey
-from sqlalchemy import Column, Date, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, backref
-engine = create_engine('sqlite:///test.db', echo=True)
-Base = declarative_base()
+# from sqlalchemy import *
+# from sqlalchemy import create_engine, ForeignKey
+# from sqlalchemy import Column, Date, Integer, String
+# from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy.orm import relationship, backref
+# engine = create_engine('sqlite:///test.db', echo=True)
+# Base = declarative_base()
 
-########################################################################
-class User(Base):
+# ########################################################################
+# class User(Base):
 
-    __tablename__ = "users"
+#     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True)
-    username = Column(String)
-    password = Column(String)
+#     id = Column(Integer, primary_key=True)
+#     username = Column(String)
+#     password = Column(String)
 
-#----------------------------------------------------------------------
-def __init__(self, username, password):
+# #----------------------------------------------------------------------
+# def __init__(self, username, password):
 
-    self.username = username
-    self.password = password
+#     self.username = username
+#     self.password = password
 
 
-# create tables
-Base.metadata.create_all(engine)
+# # create tables
+# Base.metadata.create_all(engine)

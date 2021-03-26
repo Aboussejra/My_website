@@ -1,15 +1,15 @@
 from flask import Flask
-from database import *
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+#from database import *
+#from sqlalchemy import create_engine
+#from sqlalchemy.orm import sessionmaker
 from config import Config
-from flask_bootstrap import Bootstrap
+#from flask_bootstrap import Bootstrap
 #import sqlite3
 
 app = Flask(__name__)
 app.config.from_object(Config)
 #engine = create_engine('sqlite:///test.db', echo=True)
-bootstrap = Bootstrap(app)
+#bootstrap = Bootstrap(app)
 # create a Session
 #Session = sessionmaker(bind=engine)
 #session = Session()
@@ -23,3 +23,4 @@ if __name__ == '__main__':
 # set FLASK_APP=Muscu_site.py
 
 # Linux : source activate (in venv/bin)
+# gunicorn --bind 0.0.0.0:8000 wsgi:app
