@@ -21,3 +21,5 @@ if __name__ == '__main__':
         app.run(host='0.0.0.0')
 # venv\Scripts\activate
 # set FLASK_APP=Muscu_site.py
+
+# Linux : source activate (in venv/bin)
