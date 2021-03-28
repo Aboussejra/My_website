@@ -12,6 +12,34 @@
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+
+body {
+      padding: 1%;
+      margin: auto;
+   }
+   * {
+      box-sizing: border-box;
+   }
+   .left, .right, .center {
+      float: left;
+      width: 33%;
+      color: black;
+      padding: 50px;
+      height: 500px;
+      text-align: center;
+   }
+   /* .left {
+      background-color: rgb(138, 255, 71);
+   }
+   .right {
+      background-color: teal;
+   } */
+   /* .center {
+      background-color: rgb(166, 71, 255);
+   } */
+   .container:after {
+      clear: both;
+   }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -30,7 +58,9 @@
   width: 33.33%;
 }
 
-/* Clear floats after the columns */
+/* p.c {
+  white-space: pre-wrap;
+} */
 
     </style>
  
@@ -41,11 +71,12 @@
     <link href="/static/css/HHSUL.css" rel="stylesheet">
 
   </head>
-  <div class="column"> b</div>
-  <div class="column">
-  <body class="text-center">
-
-
+  <body>
+    <div class="container">
+      <div class="left">
+      <h1>Some text on the left</h1>
+      </div>
+      <div class="center">
         <main class="form-signin">
         <form action="" method="post" novalidate>
             <h1 class="h3 mb-3 fw-normal">How much should you lift?</h1>
@@ -61,7 +92,9 @@
                 {{ form.age(size=32) }}<br>
             </p>
             <p>
-                {{ form.time_training.label }}<br>
+           
+              {{ form.time_training.label }}
+              <br>
                 {{ form.time_training(size=32) }}<br>
             </p>
             <p>
@@ -93,8 +126,11 @@
            <p>{{ prediction }}</p>
         </form>
     </main>
+  </div>
+  <div class="right">
+    <h1>Some text on the right <br> fdsqfqs</h1>
+    </div>
 </body>
   </div>
-  <div class="column"> c</div>
 
 </html>

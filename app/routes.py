@@ -1,11 +1,13 @@
 from app import app
-from flask import render_template, flash, redirect, url_for, session
+from flask import render_template, flash, redirect, url_for, session, request, jsonify
 from app.forms import LoginForm, SignupForm, HHSULForm
 #from werkzeug.security import generate_password_hash, check_password_hash
 #from sqlalchemy.orm import sessionmaker
 #from sqlalchemy.sql import select
 from database import *
 import pickle
+import pandas as pd
+import os
 #from sklearn import linear_model
 
 #engine = create_engine('sqlite:///test.db', echo=True)
@@ -117,7 +119,7 @@ with open(pkl_filename, 'rb') as file:
 
 @app.route('/HHSUL', methods=['GET', 'POST'])
 def How_Heavy_Should_U_Lift():
-    prediction = 'your prediction will appear here bruh'
+    prediction = 'your prediction will appear here'
     form = HHSULForm()
     if form.validate_on_submit():
 
@@ -129,5 +131,37 @@ def How_Heavy_Should_U_Lift():
         natty = form.natty.data
         bulking_shredding = form.bulking_shredding.data
         prediction = pickle_model.predict([[age,time_training,wheight,height,body_fat,natty,bulking_shredding]])
+        prediction = " Bench: " + str(int(prediction[0][0])) +" kg" + " Squat:" +  str(int(prediction[0][1])) + " kg" +" Deadlift: " + str(int(prediction[0][2])) + " kg"
     return render_template('HHSUL.html', form=form,prediction = prediction)
 
+@app.route('/Todo', methods=['GET', 'POST'])
+def Todo():
+    return render_template('todo.html')
+
+
+@app.route('/Anime_rec', methods=['GET', 'POST'])
+def Anime_rec():
+    if request.method == 'POST':
+        print(1)
+        anime = request.data
+        print(anime)
+        return render_template('anime_list.html')
+    return render_template('anime_list.html')
+
+@app.route('/Anime_rec/rec', methods=["POST"])
+def top_animes():
+    anime_name = request.get_json()
+    
+    #Anime_similaire = pd.read_csv('\app\static\data\Anime_similarity_tab.csv')
+    print(os.getcwd())
+    return jsonify(os.getcwd())
+    # count = 1
+    # titres_animes = Anime_similaire.columns
+    # if anime_name in titres_animes:
+    #     print('Similar anime to {} include:\n'.format(anime_name))
+    #     for item in Anime_similaire.sort_values(by = anime_name, ascending = False).index[1:11]:
+    #         print('No. {}: {}'.format(count, titres_animes[item + 1]))
+    #         count +=1
+        
+    # else:
+    #     print('Sorry bro, i do not know the anime name, and text correction is hard :( ')
