@@ -141,27 +141,19 @@ def Todo():
 
 @app.route('/Anime_rec', methods=['GET', 'POST'])
 def Anime_rec():
-    if request.method == 'POST':
-        print(1)
-        anime = request.data
-        print(anime)
-        return render_template('anime_list.html')
-    return render_template('anime_list.html')
+    return render_template('Anime_rec.html')
 
 @app.route('/Anime_rec/rec', methods=["POST"])
 def top_animes():
-    anime_name = request.get_json()
+    anime_name = request.get_json()['Anime']
     
-    #Anime_similaire = pd.read_csv('\app\static\data\Anime_similarity_tab.csv')
-    print(os.getcwd())
-    return jsonify(os.getcwd())
-    # count = 1
-    # titres_animes = Anime_similaire.columns
-    # if anime_name in titres_animes:
-    #     print('Similar anime to {} include:\n'.format(anime_name))
-    #     for item in Anime_similaire.sort_values(by = anime_name, ascending = False).index[1:11]:
-    #         print('No. {}: {}'.format(count, titres_animes[item + 1]))
-    #         count +=1
-        
-    # else:
-    #     print('Sorry bro, i do not know the anime name, and text correction is hard :( ')
+    Anime_similaire = pd.read_csv('Anime_similarity_tab.csv')
+    count = 1
+    titres_animes = Anime_similaire.columns
+    if anime_name in titres_animes:
+        result_string = 'Similar anime to {} include:\n \n'.format(anime_name)
+        for item in Anime_similaire.sort_values(by = anime_name, ascending = False).index[1:11]:
+            result_string = result_string + 'No. {}: {} \n'.format(count, titres_animes[item + 1])
+            count +=1
+    return jsonify(result_string)
+    
