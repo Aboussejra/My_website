@@ -141,7 +141,7 @@ def Todo():
 
 @app.route('/Anime_rec', methods=['GET', 'POST'])
 def Anime_rec():
-    return render_template('Anime_rec.html')
+    return render_template('anime_rec.html')
 
 @app.route('/Anime_rec/rec', methods=["POST"])
 def top_animes():
