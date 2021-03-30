@@ -119,20 +119,15 @@ with open(pkl_filename, 'rb') as file:
 
 @app.route('/HHSUL', methods=['GET', 'POST'])
 def How_Heavy_Should_U_Lift():
-    prediction = 'your prediction will appear here'
-    form = HHSULForm()
-    if form.validate_on_submit():
+    return render_template('HHSUL.html')
 
-        age = form.age.data
-        time_training = form.time_training.data
-        wheight = form.wheight.data
-        height = form.height.data
-        body_fat = form.body_fat.data
-        natty = form.natty.data
-        bulking_shredding = form.bulking_shredding.data
-        prediction = pickle_model.predict([[age,time_training,wheight,height,body_fat,natty,bulking_shredding]])
-        prediction = " Bench: " + str(int(prediction[0][0])) +" kg" + " Squat:" +  str(int(prediction[0][1])) + " kg" +" Deadlift: " + str(int(prediction[0][2])) + " kg"
-    return render_template('HHSUL.html', form=form,prediction = prediction)
+@app.route('/HHSUL/guess', methods=["POST"])
+def Guessing_HHSUL():
+    input_list = request.get_json()['input']
+    input_list = list(map(int, input_list))
+    prediction = pickle_model.predict([input_list])
+    prediction = " Bench: " + str(int(prediction[0][0])) +" kg \n" + " Squat:" +  str(int(prediction[0][1])) + " kg \n" +" Deadlift: " + str(int(prediction[0][2])) + " kg"
+    return jsonify(prediction)
 
 @app.route('/Todo', methods=['GET', 'POST'])
 def Todo():

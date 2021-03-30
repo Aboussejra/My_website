@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HHSUL</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-
-    
-
     <!-- Bootstrap core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="stylesheet" href="static/css/fontawesome.css"/>
 
     <style>
 
@@ -20,14 +25,7 @@ body {
    * {
       box-sizing: border-box;
    }
-   .left, .right, .center {
-      float: left;
-      width: 33%;
-      color: black;
-      padding: 50px;
-      height: 500px;
-      text-align: center;
-   }
+
    /* .left {
       background-color: rgb(138, 255, 71);
    }
@@ -37,31 +35,14 @@ body {
    /* .center {
       background-color: rgb(166, 71, 255);
    } */
-   .container:after {
-      clear: both;
-   }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-.column {
-  float: left;
-  width: 33.33%;
-}
 .myButton {
 position: absolute;
 top: 10px;
 right: 10px;
 }
+
+
 /* 
 body {
   background-image: url(../static/images/page-bg.jpg);
@@ -80,67 +61,95 @@ body {
     <link href="/static/css/HHSUL.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/fontawesome.css"/>
   </head>
-  <body>
-    <a href="/" class ="myButton" role="button" aria-pressed="true"><i class="fa fa-home fa-9x"></i></a>
-    <div class="container">
-      <div class="left">
-      <h1>Some text on the left</h1>
+  <a href="/" class ="myButton" role="button" aria-pressed="true"><i class="fa fa-home fa-9x"></i></a>
+  <div class="container">
+  <div class="row g-3 needs-validation">
+    <div>
+      <label for="validationCustom01" class="form-label">Age</label>
+      <input type="text" class="form-control" id="age" value="" placeholder="Enter your Age" required>
+      <div class="valid-feedback">
+        Looks good!
       </div>
-      <div class="center">
-        <main class="form-signin">
-        <form action="" method="post" novalidate>
-            <h1 class="h3 mb-3 fw-normal">How much should you lift?</h1>
-            <img class="mb-4" src="https://previews.123rf.com/images/09910190/099101901611/09910190161100055/69440477-dumbbell-black-icon-weight-lifting-dumbell-for-fitness-in-gym-vector-illustration.jpg" alt="" width="72" height="57">
-            {{ form.hidden_tag() }}
-            
-            <p>
-                {% if form.errors %} 
-                <span style="color: red;"> i need all the data to predict :(  </span>
-                {% endif %}
-            </p><p>
-                {{ form.age.label }}<br>
-                {{ form.age(size=32) }}<br>
-            </p>
-            <p>
-           
-              {{ form.time_training.label }}
-              <br>
-                {{ form.time_training(size=32) }}<br>
-            </p>
-            <p>
-                {{ form.wheight.label }}<br>
-                {{ form.wheight(size=32) }}<br>
-    
-            </p>
-            <p>
-                {{ form.height.label }}<br>
-                {{ form.height(size=32) }}<br>
-                
-            </p>
-            <p>
-                {{ form.natty.label }}<br>
-                {{ form.natty(size=32) }}<br>
-                
-            </p>
-            <p>
-                {{ form.body_fat.label }}<br>
-                {{ form.body_fat(size=32) }}<br>
-                
-            </p>
-            <p>
-                {{ form.bulking_shredding.label }}<br>
-                {{ form.bulking_shredding(size=32) }}<br>
-            </p>
-           <button class="w-100 btn btn-lg btn-primary" name="btnSubmit" type="submit">Tell me how much i should lift!</button>
-            
-           <p>{{ prediction }}</p>
-        </form>
-    </main>
-  </div>
-  <div class="right">
-    <h1>Some text on the right <br> fdsqfqs</h1>
     </div>
-</body>
+    <div>
+      <label for="validationCustom02" class="form-label">Years of training</label>
+      <input type="text" class="form-control" id="time_training" placeholder="Enter float value (1.5 for a year and a half)" value="" required>
+    </div>
+    <div>
+      <label for="validationCustom02" class="form-label">Wheight</label>
+      <input type="text" class="form-control" id="wheight" placeholder="Enter Kgs" value="" required>
 
+    <div>
+      <label for="validationCustom02" class="form-label">Height</label>
+      <input type="text" class="form-control" id="height" placeholder="Enter meters, 1.80 for 1 meter and 80 centimeters" required>
+    </div>
+    
+    <div>
+      <label for="validationCustom02" class="form-label">Body Fat</label>
+      <input type="text" class="form-control" id="body_fat" placeholder="Enter Body Fat in percent" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div >
+      <label class="form-label">Are you Natty?</label>
+      <select id ="natty" class="form-select" required aria-label="select example" placeholder="Are you Natural?">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <div class="invalid-feedback">Example invalid select feedback</div>
+    </div>
+    <div>
+      <label class="form-label">Type of diet</label>
+      <select id ="bulking_shredding" class="form-select" required aria-label="select example">
+        <option value="1">Normal</option>
+        <option value="2">Bulking</option>
+        <option value="0">Shredding</option>
+      </select>
+      <div class="invalid-feedback">Example invalid select feedback</div>
+    </div>
+    <br>
+    <div>
+      <button class="btn btn-primary"  onclick="make_pred()">Tell me how much i should lift!</button>
+      
+    </div>
+    <small id="Help" class="form-text text-muted"> Make sure all data is written as indicated else i can't predict</small>
+  </div>
+</div>
+<script>
+  
+  function make_pred(){
+    var age = $("#age").val();
+    var time_training = $("#time_training").val();
+    var wheight = $("#wheight").val();
+    var height = $("#height").val();
+    var body_fat = $("#body_fat").val();
+    var natty = $("#natty").val();
+    var bulking_shredding = $("#bulking_shredding").val();
+    var data_list = [age,time_training,wheight,height,body_fat,natty,bulking_shredding];
+    console.log(data_list)
+    $.ajax({
+            url: "/HHSUL/guess",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({"input": data_list})        }).done(function(data) {
+              Swal.fire({
+                title:  data,
+                width: 600,
+  icon: 'success',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: 'Another recommendation!',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  },
+})
+
+});
+
+  }
+  </script>
 
 </html>
