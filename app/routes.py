@@ -4,7 +4,7 @@ from app.forms import LoginForm, SignupForm, HHSULForm
 #from werkzeug.security import generate_password_hash, check_password_hash
 #from sqlalchemy.orm import sessionmaker
 #from sqlalchemy.sql import select
-from database import *
+#from database import *
 import pickle
 import pandas as pd
 import os
@@ -152,3 +152,6 @@ def top_animes():
             count +=1
     return jsonify(result_string)
     
+@app.route('/Get_lyrics', methods=['GET', 'POST'])
+def Get_lyrics():
+    return render_template('get_lyrics.html')
