@@ -124,7 +124,7 @@ def How_Heavy_Should_U_Lift():
 @app.route('/HHSUL/guess', methods=["POST"])
 def Guessing_HHSUL():
     input_list = request.get_json()['input']
-    input_list = list(map(int, input_list))
+    input_list = list(map(float, input_list))
     prediction = pickle_model.predict([input_list])
     prediction = " Bench: " + str(int(prediction[0][0])) +" kg \n" + " Squat:" +  str(int(prediction[0][1])) + " kg \n" +" Deadlift: " + str(int(prediction[0][2])) + " kg"
     return jsonify(prediction)

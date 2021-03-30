@@ -2,3 +2,4 @@ venv
 Other non included documents
 app.zip
 __pycache__
+app/__pycache__
