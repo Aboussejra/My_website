@@ -3,3 +3,4 @@ Other non included documents
 app.zip
 __pycache__
 app/__pycache__
+.vscode/settings.json
