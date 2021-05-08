@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .myButton {
+position: absolute;
+top: 10px;
+right: 10px;
+}
+  </style>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link rel="stylesheet" href="static/css/fontawesome.css"/>
+</head>
+<body>
+  <a href="/" class ="myButton" role="button" aria-pressed="true"><i class="fa fa-home fa-9x"></i></a>
+<div class="container">
+  <h2>Anime recommendation</h2>
+  <p>Search for your anime then click on it to get your recommendation </p>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <div id="myDIV">
+    <table>
+      <tr>
+        <td>
+          <button  onclick="myFunction('Accel World')" class="btn-link">Accel World</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Akame ga Kill!')" class="btn-link">Akame ga Kill!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Akatsuki no Yona')" class="btn-link">Akatsuki no Yona</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Aldnoah.Zero')" class="btn-link">Aldnoah.Zero</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Amagi Brilliant Park')" class="btn-link">Amagi Brilliant Park</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Angel Beats!')" class="btn-link">Angel Beats!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.')" class="btn-link">Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Another')" class="btn-link">Another</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ansatsu Kyoushitsu (TV)')" class="btn-link">Ansatsu Kyoushitsu (TV)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ao Haru Ride')" class="btn-link">Ao Haru Ride</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ao no Exorcist')" class="btn-link">Ao no Exorcist</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Baccano!')" class="btn-link">Baccano!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Baka to Test to Shoukanjuu')" class="btn-link">Baka to Test to Shoukanjuu</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Bakemonogatari')" class="btn-link">Bakemonogatari</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Bakuman.')" class="btn-link">Bakuman.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Barakamon')" class="btn-link">Barakamon</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Beelzebub')" class="btn-link">Beelzebub</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Berserk')" class="btn-link">Berserk</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Black Bullet')" class="btn-link">Black Bullet</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Black Lagoon')" class="btn-link">Black Lagoon</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Black Lagoon: The Second Barrage')" class="btn-link">Black Lagoon: The Second Barrage</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Bleach')" class="btn-link">Bleach</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Blood Lad')" class="btn-link">Blood Lad</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Blood+')" class="btn-link">Blood+</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Boku dake ga Inai Machi')" class="btn-link">Boku dake ga Inai Machi</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Boku no Hero Academia')" class="btn-link">Boku no Hero Academia</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Boku wa Tomodachi ga Sukunai')" class="btn-link">Boku wa Tomodachi ga Sukunai</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Boku wa Tomodachi ga Sukunai Next')" class="btn-link">Boku wa Tomodachi ga Sukunai Next</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Btooom!')" class="btn-link">Btooom!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Charlotte')" class="btn-link">Charlotte</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Chobits')" class="btn-link">Chobits</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Chuunibyou demo Koi ga Shitai!')" class="btn-link">Chuunibyou demo Koi ga Shitai!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Chuunibyou demo Koi ga Shitai! Ren')" class="btn-link">Chuunibyou demo Koi ga Shitai! Ren</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Clannad')" class="btn-link">Clannad</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Clannad: After Story')" class="btn-link">Clannad: After Story</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Claymore')" class="btn-link">Claymore</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Code Geass: Hangyaku no Lelouch')" class="btn-link">Code Geass: Hangyaku no Lelouch</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Code Geass: Hangyaku no Lelouch R2')" class="btn-link">Code Geass: Hangyaku no Lelouch R2</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Cowboy Bebop')" class="btn-link">Cowboy Bebop</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('D.Gray-man')" class="btn-link">D.Gray-man</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation')" class="btn-link">Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Danshi Koukousei no Nichijou')" class="btn-link">Danshi Koukousei no Nichijou</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Darker than Black: Kuro no Keiyakusha')" class="btn-link">Darker than Black: Kuro no Keiyakusha</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Darker than Black: Ryuusei no Gemini')" class="btn-link">Darker than Black: Ryuusei no Gemini</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Date A Live')" class="btn-link">Date A Live</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Deadman Wonderland')" class="btn-link">Deadman Wonderland</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Death Note')" class="btn-link">Death Note</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Death Parade')" class="btn-link">Death Parade</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Dragon Ball')" class="btn-link">Dragon Ball</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Dragon Ball GT')" class="btn-link">Dragon Ball GT</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Dragon Ball Z')" class="btn-link">Dragon Ball Z</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka')" class="btn-link">Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Durarara!!')" class="btn-link">Durarara!!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Elfen Lied')" class="btn-link">Elfen Lied</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ergo Proxy')" class="btn-link">Ergo Proxy</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Eureka Seven')" class="btn-link">Eureka Seven</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fairy Tail')" class="btn-link">Fairy Tail</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fairy Tail (2014)')" class="btn-link">Fairy Tail (2014)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fate/Zero')" class="btn-link">Fate/Zero</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fate/Zero 2nd Season')" class="btn-link">Fate/Zero 2nd Season</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fate/stay night')" class="btn-link">Fate/stay night</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fate/stay night: Unlimited Blade Works')" class="btn-link">Fate/stay night: Unlimited Blade Works</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fate/stay night: Unlimited Blade Works 2nd Season')" class="btn-link">Fate/stay night: Unlimited Blade Works 2nd Season</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Free!')" class="btn-link">Free!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fruits Basket')" class="btn-link">Fruits Basket</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Full Metal Panic!')" class="btn-link">Full Metal Panic!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fullmetal Alchemist')" class="btn-link">Fullmetal Alchemist</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Fullmetal Alchemist: Brotherhood')" class="btn-link">Fullmetal Alchemist: Brotherhood</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Gangsta.')" class="btn-link">Gangsta.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Gate: Jieitai Kanochi nite, Kaku Tatakaeri')" class="btn-link">Gate: Jieitai Kanochi nite, Kaku Tatakaeri</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Gekkan Shoujo Nozaki-kun')" class="btn-link">Gekkan Shoujo Nozaki-kun</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Gintama')" class="btn-link">Gintama</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Golden Time')" class="btn-link">Golden Time</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Gosick')" class="btn-link">Gosick</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Great Teacher Onizuka')" class="btn-link">Great Teacher Onizuka</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Guilty Crown')" class="btn-link">Guilty Crown</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hai to Gensou no Grimgar')" class="btn-link">Hai to Gensou no Grimgar</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Haikyuu!!')" class="btn-link">Haikyuu!!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hataraku Maou-sama!')" class="btn-link">Hataraku Maou-sama!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hellsing')" class="btn-link">Hellsing</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hentai Ouji to Warawanai Neko.')" class="btn-link">Hentai Ouji to Warawanai Neko.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Higashi no Eden')" class="btn-link">Higashi no Eden</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('High School DxD')" class="btn-link">High School DxD</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('High School DxD New')" class="btn-link">High School DxD New</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Highschool of the Dead')" class="btn-link">Highschool of the Dead</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Higurashi no Naku Koro ni')" class="btn-link">Higurashi no Naku Koro ni</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Higurashi no Naku Koro ni Kai')" class="btn-link">Higurashi no Naku Koro ni Kai</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hunter x Hunter (2011)')" class="btn-link">Hunter x Hunter (2011)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Hyouka')" class="btn-link">Hyouka</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('IS: Infinite Stratos')" class="btn-link">IS: Infinite Stratos</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ichiban Ushiro no Daimaou')" class="btn-link">Ichiban Ushiro no Daimaou</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Inu x Boku SS')" class="btn-link">Inu x Boku SS</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('InuYasha')" class="btn-link">InuYasha</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('K')" class="btn-link">K</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('K-On!')" class="btn-link">K-On!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('K-On!!')" class="btn-link">K-On!!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kaichou wa Maid-sama!')" class="btn-link">Kaichou wa Maid-sama!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kami nomi zo Shiru Sekai')" class="btn-link">Kami nomi zo Shiru Sekai</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Katanagatari')" class="btn-link">Katanagatari</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Katekyo Hitman Reborn!')" class="btn-link">Katekyo Hitman Reborn!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kaze no Stigma')" class="btn-link">Kaze no Stigma</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kekkai Sensen')" class="btn-link">Kekkai Sensen</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kill la Kill')" class="btn-link">Kill la Kill</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kimi ni Todoke')" class="btn-link">Kimi ni Todoke</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kiseijuu: Sei no Kakuritsu')" class="btn-link">Kiseijuu: Sei no Kakuritsu</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kiss x Sis (TV)')" class="btn-link">Kiss x Sis (TV)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kokoro Connect')" class="btn-link">Kokoro Connect</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kono Subarashii Sekai ni Shukufuku wo!')" class="btn-link">Kono Subarashii Sekai ni Shukufuku wo!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kore wa Zombie Desu ka?')" class="btn-link">Kore wa Zombie Desu ka?</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Koutetsujou no Kabaneri')" class="btn-link">Koutetsujou no Kabaneri</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kuroko no Basket')" class="btn-link">Kuroko no Basket</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kuroko no Basket 2nd Season')" class="btn-link">Kuroko no Basket 2nd Season</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kuroshitsuji')" class="btn-link">Kuroshitsuji</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kuroshitsuji II')" class="btn-link">Kuroshitsuji II</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Kyoukai no Kanata')" class="btn-link">Kyoukai no Kanata</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Log Horizon')" class="btn-link">Log Horizon</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Log Horizon 2nd Season')" class="btn-link">Log Horizon 2nd Season</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Lovely★Complex')" class="btn-link">Lovely★Complex</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Lucky☆Star')" class="btn-link">Lucky☆Star</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Magi: The Kingdom of Magic')" class="btn-link">Magi: The Kingdom of Magic</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Magi: The Labyrinth of Magic')" class="btn-link">Magi: The Labyrinth of Magic</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Mahou Shoujo Madoka★Magica')" class="btn-link">Mahou Shoujo Madoka★Magica</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Mahouka Koukou no Rettousei')" class="btn-link">Mahouka Koukou no Rettousei</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Mirai Nikki (TV)')" class="btn-link">Mirai Nikki (TV)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?')" class="btn-link">Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Monogatari Series: Second Season')" class="btn-link">Monogatari Series: Second Season</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Monster')" class="btn-link">Monster</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Mushishi')" class="btn-link">Mushishi</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('NHK ni Youkoso!')" class="btn-link">NHK ni Youkoso!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Nagi no Asukara')" class="btn-link">Nagi no Asukara</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Nanatsu no Taizai')" class="btn-link">Nanatsu no Taizai</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Naruto')" class="btn-link">Naruto</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Natsume Yuujinchou')" class="btn-link">Natsume Yuujinchou</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Neon Genesis Evangelion')" class="btn-link">Neon Genesis Evangelion</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Nichijou')" class="btn-link">Nichijou</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Nisekoi')" class="btn-link">Nisekoi</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Nisemonogatari')" class="btn-link">Nisemonogatari</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('No Game No Life')" class="btn-link">No Game No Life</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Noragami')" class="btn-link">Noragami</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Noragami Aragoto')" class="btn-link">Noragami Aragoto</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('One Punch Man')" class="btn-link">One Punch Man</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ookami to Koushinryou')" class="btn-link">Ookami to Koushinryou</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ookami to Koushinryou II')" class="btn-link">Ookami to Koushinryou II</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ore Monogatari!!')" class="btn-link">Ore Monogatari!!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ore no Imouto ga Konnani Kawaii Wake ga Nai')" class="btn-link">Ore no Imouto ga Konnani Kawaii Wake ga Nai</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Ouran Koukou Host Club')" class="btn-link">Ouran Koukou Host Club</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Overlord')" class="btn-link">Overlord</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Owari no Seraph')" class="btn-link">Owari no Seraph</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Pandora Hearts')" class="btn-link">Pandora Hearts</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Plastic Memories')" class="btn-link">Plastic Memories</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Pokemon')" class="btn-link">Pokemon</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Prison School')" class="btn-link">Prison School</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Psycho-Pass')" class="btn-link">Psycho-Pass</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Psycho-Pass 2')" class="btn-link">Psycho-Pass 2</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Re:Zero kara Hajimeru Isekai Seikatsu')" class="btn-link">Re:Zero kara Hajimeru Isekai Seikatsu</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('ReLIFE')" class="btn-link">ReLIFE</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Rokka no Yuusha')" class="btn-link">Rokka no Yuusha</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Rosario to Vampire')" class="btn-link">Rosario to Vampire</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Rosario to Vampire Capu2')" class="btn-link">Rosario to Vampire Capu2</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Rurouni Kenshin: Meiji Kenkaku Romantan')" class="btn-link">Rurouni Kenshin: Meiji Kenkaku Romantan</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sakurasou no Pet na Kanojo')" class="btn-link">Sakurasou no Pet na Kanojo</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Samurai Champloo')" class="btn-link">Samurai Champloo</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sankarea')" class="btn-link">Sankarea</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('School Days')" class="btn-link">School Days</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Seitokai Yakuindomo')" class="btn-link">Seitokai Yakuindomo</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Serial Experiments Lain')" class="btn-link">Serial Experiments Lain</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shakugan no Shana')" class="btn-link">Shakugan no Shana</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shigatsu wa Kimi no Uso')" class="btn-link">Shigatsu wa Kimi no Uso</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shiki')" class="btn-link">Shiki</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shingeki no Kyojin')" class="btn-link">Shingeki no Kyojin</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shinsekai yori')" class="btn-link">Shinsekai yori</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Shokugeki no Souma')" class="btn-link">Shokugeki no Souma</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sora no Otoshimono')" class="btn-link">Sora no Otoshimono</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Soul Eater')" class="btn-link">Soul Eater</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Steins;Gate')" class="btn-link">Steins;Gate</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Strike the Blood')" class="btn-link">Strike the Blood</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sukitte Ii na yo.')" class="btn-link">Sukitte Ii na yo.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Suzumiya Haruhi no Yuuutsu')" class="btn-link">Suzumiya Haruhi no Yuuutsu</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Suzumiya Haruhi no Yuuutsu (2009)')" class="btn-link">Suzumiya Haruhi no Yuuutsu (2009)</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sword Art Online')" class="btn-link">Sword Art Online</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Sword Art Online II')" class="btn-link">Sword Art Online II</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Tengen Toppa Gurren Lagann')" class="btn-link">Tengen Toppa Gurren Lagann</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('To LOVE-Ru')" class="btn-link">To LOVE-Ru</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Toaru Kagaku no Railgun')" class="btn-link">Toaru Kagaku no Railgun</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Toaru Majutsu no Index')" class="btn-link">Toaru Majutsu no Index</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Tokyo Ghoul')" class="btn-link">Tokyo Ghoul</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Tokyo Ghoul √A')" class="btn-link">Tokyo Ghoul √A</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Tonari no Kaibutsu-kun')" class="btn-link">Tonari no Kaibutsu-kun</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Toradora!')" class="btn-link">Toradora!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Trigun')" class="btn-link">Trigun</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Trinity Seven')" class="btn-link">Trinity Seven</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Vampire Knight')" class="btn-link">Vampire Knight</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!')" class="btn-link">Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Yahari Ore no Seishun Love Comedy wa Machigatteiru.')" class="btn-link">Yahari Ore no Seishun Love Comedy wa Machigatteiru.</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku')" class="btn-link">Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Zankyou no Terror')" class="btn-link">Zankyou no Terror</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Zero no Tsukaima')" class="btn-link">Zero no Tsukaima</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Zero no Tsukaima: Futatsuki no Kishi')" class="btn-link">Zero no Tsukaima: Futatsuki no Kishi</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Zero no Tsukaima: Princesses no Rondo')" class="btn-link">Zero no Tsukaima: Princesses no Rondo</button>
+      </td>
+      </tr><tr>
+        <td>
+          <button  onclick="myFunction('Zetsuen no Tempest')" class="btn-link">Zetsuen no Tempest</button>
+      </td>
+      </tr></table>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+function myFunction(obj) {
+  $.ajax({
+            url: "/Anime_rec/rec",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({"Anime": obj})        }).done(function(data) {
+              Swal.fire({
+                title:  data,
+                width: 600,
+  icon: 'success',
+  confirmButtonColor: '#3085d6',
+  confirmButtonText: 'Another recommendation!',
+  showClass: {
+    popup: 'animate__animated animate__fadeInDown'
+  },
+  hideClass: {
+    popup: 'animate__animated animate__fadeOutUp'
+  },
+})
+
+});
+};
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
